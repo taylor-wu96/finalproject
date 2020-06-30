@@ -1,0 +1,55 @@
+平行宇宙237
+Cinogawa(魔神族稱呼用語)，Crugoturn(先靈族稱呼用語) ，以下用Cinogawa代指，唯一高度發展的自律行星，依照人類語而言被定義為，宜居行星，星球上含有部分氧氣，主要成份為氦氣，Cinogawa地貌多變，最高處為海拔14500公尺，最低處為海拔-300446公尺，擁有豐富多樣生態系，主要有兩大洲，分別被兩個部落所佔領，魔神族所統治的區域為中低緯度，主要以雨林，少數的沙漠生態為主，而先靈族所統治的區域多為冰河，高山地形，以及溫帶寒帶闊葉林，等等。
+
+而還有另一處則是遺落大陸，是Cinogawa當中少數的荒漠以及沼澤地區。
+
+地形：整個Cinogawa，主要以雨林地形為主，而中間的分隔區則為沙漠地形，搭配沼澤地型為主。
+
+Cinogawa May30 00-01.png
+以下為Cinogawa的基本參數：
+
+Gravimetry  
+Gravity   5.11 m/s2   (0.52 x earth)
+
+Escape Velocity   6.11 km/s
+
+Rotation
+
+Period 51.95 hours
+
+Axis Tilt  4.84 °
+
+Hydrosphere
+
+Water 65 %
+
+Ice   8 %
+
+Atmosphere
+
+Type   Thin breathable
+
+Pressure    62.99 kPa   (0.62 x earth)
+
+Composition  67.6% argon, 24.1% oxygen, 5.6% carbon dioxide, 2.7% sulfur dioxide, trace other gases
+
+Climate
+
+Type   Standard
+
+Min Temp  228 K   (-44 °C)
+
+Avg Temp  293 K   (20 °C)
+
+Max Temp 375 K   (102 °C)
+
+Biosphere    
+
+Chemistry  Carbon
+
+Lifeforms    Prokaryotic microbes
+
+Special  
+
+Features Advanced alien artifact, heavy volcanism
+
