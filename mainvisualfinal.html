@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Neovis.js 第八組</title>
+	<style type="text/css">
+		html,
+		body {
+			font: 16pt arial;
+		}
+
+		#viz {
+			width: 900px;
+			height: 700px;
+			border: 1px solid lightgray;
+			font: 22pt arial;
+		}
+	</style>
+
+	<script src="https://rawgit.com/neo4j-contrib/neovis.js/master/dist/neovis.js"></script>
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+
+		var viz;
+
+		//setup: server url, user, password
+		function draw() {
+			var config = {
+				container_id: "viz",
+				server_url: "bolt://52.86.183.119:7687",
+				server_user: "neo4j",
+				server_password: "neo4j",
+				labels: {
+					"Category": {
+						"caption": "title",
+						"sizeCypher": "MATCH (n) WHERE id(n)=$id RETURN CASE n.parents WHEN '***' THEN 3 ELSE 1 END;"
+					},
+					"仙靈域": {
+						"caption": "title"
+					},
+					"Cinogawa": {
+						"caption": "title"
+					},
+					"魔神陸": {
+						"caption": "title"
+					},
+					"仙靈族": {
+						"caption": "title"
+					},
+					"魔神族": {
+						"caption": "title"
+					},
+					"領袖": {
+						"caption": "title"
+					},
+					"長老": {
+						"caption": "title"
+					},
+					"先知": {
+						"caption": "title"
+					},
+					"洲長": {
+						"caption": "title"
+					},
+					"騎士": {
+						"caption": "title"
+					},
+					"族民": {
+						"caption": "title"
+					},
+					"仙靈域社會階層": {
+						"caption": "title"
+					},
+					"魔神陸社會階層": {
+						"caption": "title"
+					},
+					"仙靈域郡縣制度": {
+						"caption": "title"
+					},
+					"盟主": {
+						"caption": "title"
+					},
+					"祭司": {
+						"caption": "title"
+					},
+					"媒人": {
+						"caption": "title"
+					},
+					"靈修士": {
+						"caption": "title"
+					},
+					"平民": {
+						"caption": "title"
+					},
+					"女巫": {
+						"caption": "title"
+					},
+					"軍團長": {
+						"caption": "title"
+					},
+					"傭兵": {
+						"caption": "title"
+					},
+					"魔神族信仰": {
+						"caption": "title"
+					},
+					"仙靈族族信仰": {
+						"caption": "title"
+					},
+					"魔神族魔法": {
+						"caption": "title"
+					},
+					"魔神族家族": {
+						"caption": "title"
+					},
+					"魔神族儀式": {
+						"caption": "title"
+					},
+					"仙靈族儀式": {
+						"caption": "title"
+					},
+					"魔神陸七大名": {
+						"caption": "title"
+					},
+					"遺落大陸人物": {
+						"caption": "title"
+					},
+					"仙靈域七大名": {
+						"caption": "title"
+					}
+				},
+				relationships: {
+					"subClassOf": {
+						"thickness":0.7 ,
+						"caption": false
+					},
+					"ObjectOneOf": {
+						"thickness":0.7 ,
+						"caption": false
+					},
+				},
+				initial_cypher: "MATCH (n)-[r]->(m) RETURN n,r,m "
+			};
+
+			viz = new NeoVis.default(config);
+			viz.registerOnEvent("completed", (e) => {
+				viz["_network"].on("click", (event) => {
+					var node = event.nodes[0];
+					if (node)
+						var url = viz["_nodes"][node].title.split("<strong>url:</strong> ")[1].split("<br>")[0];
+					if (url) {
+						window.open(url);
+					}
+				});
+
+			});
+			viz.render();
+			console.log(viz);
+		}
+	</script>
+</head>
+
+<body onload="draw()">
+	<div id="viz"></div>
+	<input type="submit" value="Stabilize" id="stabilize">
+	<input type="submit" value="Reset" id="reload">
+</body>
+
+<script>
+	$("#reload").click(function () {
+		viz.reload();
+	});
+
+	$("#stabilize").click(function () {
+		viz.stabilize();
+	})
+
+</script>
+
+</html>
